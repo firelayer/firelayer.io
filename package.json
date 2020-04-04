@@ -1,0 +1,24 @@
+{
+  "name": "firelayer.io",
+  "version": "0.0.0",
+  "description": "firelayer.io website",
+  "private": true,
+  "scripts": {
+    "deploy": "firebase deploy --only hosting"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.1.0",
+    "husky": "^4.2.3"
+  }
+}

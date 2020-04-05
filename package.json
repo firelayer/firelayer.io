@@ -1,10 +1,20 @@
 {
   "name": "firelayer.io",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "firelayer.io website",
   "private": true,
+  "workspaces": [
+    "app/*"
+  ],
   "scripts": {
-    "deploy": "firebase deploy --only hosting"
+    "start": "yarn dev",
+    "build": "lerna run build",
+    "dev": "lerna run build && lerna run dev --parallel",
+    "lint": "eslint --cache --cache-location=.cache/eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx,.mjs,.vue --report-unused-disable-directives .",
+    "bootstrap": "yarn && lerna bootstrap",
+    "deploy": "yarn build && firebase deploy",
+    "http": "cd app/www && yarn http",
+    "functions": "cd app/functions && yarn serve"
   },
   "husky": {
     "hooks": {
@@ -19,6 +29,7 @@
   "devDependencies": {
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^6.8.0",
     "husky": "^4.2.3"
   }
 }

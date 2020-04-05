@@ -9,3 +9,5 @@ package-json.lock
 .DS_Store
 .cache
 dist
+.nuxt
+dist

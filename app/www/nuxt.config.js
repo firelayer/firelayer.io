@@ -1,15 +1,14 @@
-/* eslint-disable @typescript-eslint/camelcase */
+import fs from 'fs'
+import path from 'path'
+import markdownIt from 'markdown-it'
+import markdownItAnchor from 'markdown-it-anchor'
+import hljs from 'highlight.js'
+
 export default {
   mode: 'universal',
   srcDir: 'src/',
-  generate: {
-    fallback: true
-  },
-  /*
-  ** Headers of the page
-  */
   head: {
-    title: 'Firelayer.io',
+    title: 'Firelayer - Jumpstart your Firebase Project',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -17,55 +16,98 @@ export default {
       { hid: 'description', name: 'description', content: 'Firelayer - Jumpstart your Firebase Project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Material+Icons' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
+  loading: { color: '#ff4700' },
   css: [
+    '~/assets/styles/global.css',
+    '~/assets/styles/hljs.css'
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [
+    '~/plugins/animate.js',
+    '~/plugins/clipboard.js'
   ],
-  /*
-  ** Nuxt.js dev-modules
-  */
   buildModules: [
+    ['@nuxtjs/vuetify', {
+      customVariables: ['~/assets/styles/vuetify'],
+      optionsPath: '~/config/vuetify.options.js',
+      treeShake: true
+    }]
   ],
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     ['@nuxtjs/pwa', {
       meta: false,
       workbox: false,
       oneSignal: false
-    }]
+    }],
+    '@nuxtjs/sitemap'
   ],
-  /**
-   * Manifest
-   */
+  styleResources: {
+    scss: [
+      '~/assets/styles/vuetify/_index.scss'
+    ]
+  },
+  generate: {
+    fallback: true,
+    routes() {
+      const files = []
+
+      fs.readdirSync(path.join(__dirname, 'src/docs')).forEach((file) => {
+        files.push('/docs/' + file.replace('.md', ''))
+      })
+
+      return files
+    }
+  },
+  sitemap: {
+    hostname: 'https://firelayer.io',
+    gzip: true,
+    exclude: [
+      '/_static/'
+    ]
+  },
   manifest: {
     name: 'Firelayer',
-    short_name: 'Firelayer',
+    'short_name': 'Firelayer',
     description: 'Firelayer - Jumpstart you Firebase Project'
   },
-  /*
-  ** Build configuration
-  */
   build: {
     publicPath: '/_static/',
-    /*
-    ** You can extend webpack config here
-    */
     extend (config, ctx) {
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+        options: {
+          markdownIt: markdownIt({
+            html: true,
+            linkify: true,
+            breaks: true,
+            highlight: function (str, lang) {
+              if (lang && hljs.getLanguage(lang)) {
+                try {
+                  return `<pre><div class="hljs ${lang}">` +
+                         hljs.highlight(lang, str, true).value +
+                         '</div></pre>'
+                // eslint-disable-next-line no-empty
+                } catch (__) {}
+              }
+
+              return '<kbd>' + md.utils.escapeHtml(str) + '</kbd>'
+            }
+          }).use(markdownItAnchor, {
+            permalink: true,
+            permalinkClass: 'd-none header-anchor',
+            permalinkSymbol: '#',
+            permalinkBefore: true
+          })
+        }
+      })
     }
   }
 }

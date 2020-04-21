@@ -14,6 +14,7 @@
     "bootstrap": "yarn && lerna bootstrap",
     "deploy": "yarn build && firebase deploy",
     "http": "cd app/www && yarn http",
+    "www": "cd app/www && yarn dev",
     "functions": "cd app/functions && yarn serve"
   },
   "husky": {

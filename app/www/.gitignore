@@ -5,9 +5,8 @@ yarn-debug.log*
 yarn-error.log*
 node_modules
 package-json.lock
+dist
 .firebase
 .DS_Store
 .cache
-dist
 .nuxt
-dist

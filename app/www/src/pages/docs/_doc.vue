@@ -47,7 +47,7 @@
         </v-list-item>
       </v-list>
 
-      <div class="pa-md-2 pl-md-12">
+      <div class="pa-md-2 pl-md-12" style="min-width: 0">
         <h1>{{ doc.attributes.title }}</h1>
         <a :href="`https://github.com/firelayer/firelayer.io/blob/master/app/www/src/docs/${filename}.md`" target="_blank" class="text-uppercase caption font-weight-black">Edit this page</a>
         <div class="mt-4" v-html="doc.html"></div>
@@ -123,6 +123,10 @@ export default {
 
   .docs-container {
     position: relative;
+  }
+
+  .v-list-item__title {
+    line-height: 1.5rem !important;
   }
 
   .v-list-item--active {

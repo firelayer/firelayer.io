@@ -72,6 +72,33 @@ firelayer deploy:env
 firelayer deploy:cors
 ```
 
+### env
+Set working environment. It will use the respective `.firebaserc` aliases and config files.
+
+Affects which configs are injected using `firelayer run "node index.js"`
+
+Example for `firelayer env default` will use the config files:
+- config/**app.json**, config/functions/**env.json**, etc
+- `.firebaserc` alias 'default'
+- config/keys/**key.json**
+
+<br>
+
+Example for `firelayer env production` will use the config files:
+- config/app.**production**.json, config/functions/env.**production**.json, etc
+- `.firebaserc` alias 'production'
+- config/keys/key.**production**.json
+
+<br>
+
+```sh
+# display current environment
+firelayer env
+
+# change environment to 'default'
+firelayer env default
+```
+
 ### init
 Create a new project
 

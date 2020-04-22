@@ -47,7 +47,7 @@
         </v-list-item>
       </v-list>
 
-      <div class="pa-md-2 pl-md-12" style="min-width: 0">
+      <div class="pa-md-2 pl-md-12" style="min-width: 0; width: 100%;">
         <h1>{{ doc.attributes.title }}</h1>
         <a :href="`https://github.com/firelayer/firelayer.io/blob/master/app/www/src/docs/${filename}.md`" target="_blank" class="text-uppercase caption font-weight-black">Edit this page</a>
         <div class="mt-4" v-html="doc.html"></div>
@@ -72,7 +72,8 @@ export default {
       items: [
         { title: 'Getting Started', link: '/docs/getting-started' },
         { title: 'Configuration', link: '/docs/configuration' },
-        { title: 'Directory Structure', link: '/docs/directory-structure' }
+        { title: 'Directory Structure', link: '/docs/directory-structure' },
+        { title: 'CLI', link: '/docs/cli' }
       ],
       drawer: false
     }
@@ -122,6 +123,10 @@ export default {
 
   .v-list-item--active {
     color: $primary !important;
+  }
+
+  img {
+    max-width: 100%;
   }
 
   h2,

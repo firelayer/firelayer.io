@@ -5,8 +5,8 @@
       <v-container>
         <v-row no-gutters>
           <v-col cols="12" md="6" class="mt-md-8">
-            <h1 class="display-2 mb-6" :class="{'display-1': $vuetify.breakpoint.xs}">Jumpstart your <span class="primary--text">Firebase</span> Project</h1>
-            <h3 class="body-1 font-weight-bold">Build your next Firebase application with the help of Firelayer. An open source framework making Firebase web development faster to start and maintain.</h3>
+            <h1 class="display-2 mb-6" :class="{'display-1': $vuetify.breakpoint.xs}">Jumpstart your <span class="primary--text">Firebase</span> Web Project</h1>
+            <h3 class="body-1 font-weight-bold">Build your next Firebase application with the help of Firelayer. An open source framework making Firebase web development faster to start and easier to maintain.</h3>
             <div class="mt-6">
               <v-btn
                 class="text-uppercase"

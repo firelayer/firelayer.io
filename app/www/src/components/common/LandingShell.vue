@@ -12,20 +12,28 @@
           npm install -g @firelayer/cli
         </copy-label>
       </div>
-      <div class="etc noselect">$ ...</div>
+      <div class="etc noselect">$ ..install firelayer globally</div>
       <div>
         <span class="noselect">$ </span>
         <copy-label text="firelayer init blog">
           firelayer init blog
         </copy-label>
       </div>
-      <div class="etc noselect">$ ..new project initialized on folder blog</div>
+      <div class="etc noselect">$ ..follow the installation prompts</div>
       <div>
         <span class="noselect">$ </span>
         <copy-label text="cd blog">
           cd blog
         </copy-label>
       </div>
+      <div class="etc noselect">$ ..new project created on folder blog</div>
+      <div>
+        <span class="noselect">$ </span>
+        <copy-label text="cd blog">
+          yarn dev
+        </copy-label>
+      </div>
+      <div class="etc noselect">$ ..and develop away</div>
     </div>
   </div>
 </template>

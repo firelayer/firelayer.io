@@ -27,8 +27,9 @@ export default {
     '~/assets/styles/hljs.css'
   ],
   plugins: [
-    '~/plugins/animate.js',
-    '~/plugins/clipboard.js'
+    { src: '~/plugins/ga.js', mode: 'client' },
+    { src: '~/plugins/animate.js', mode: 'client' },
+    { src: '~/plugins/clipboard.js', mode: 'client' }
   ],
   buildModules: [
     ['@nuxtjs/vuetify', {

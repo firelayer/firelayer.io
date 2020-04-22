@@ -61,15 +61,6 @@
 </template>
 
 <script>
-
-function getSlug(name) {
-  return name
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^\w\s]/gi, '')
-    .split(' ').join('-')
-}
-
 export default {
   async validate({ params, redirect }) {
     if (!params.doc) return redirect('/docs/getting-started')

@@ -94,13 +94,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer-links {
-  a {
-    display: inline-block;
-    margin: 10px;
-  }
-}
-
 .v-btn--active {
   &:before {
     background-color: transparent;

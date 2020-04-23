@@ -1,5 +1,12 @@
 <template>
-  <div>
+  <div class="text-center pa-2 pt-12 pb-6">
+    <v-img
+      class="mb-5"
+      height="200px"
+      contain
+      src="/images/error.svg"
+    ></v-img>
+
     <h1 v-if="error.statusCode === 404">{{ pageNotFound }}</h1>
     <h1 v-else>{{ otherError }}</h1>
   </div>

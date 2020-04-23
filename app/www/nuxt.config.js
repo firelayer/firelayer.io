@@ -4,6 +4,14 @@ import markdownIt from 'markdown-it'
 import markdownItAnchor from 'markdown-it-anchor'
 import hljs from 'highlight.js'
 
+const isProd = process.env.NODE_ENV === 'production'
+
+const proxy = isProd ? {} : {
+  '/subscribe': {
+    target: 'http://localhost:5000/firelayer-io/subscribe'
+  }
+}
+
 export default {
   mode: 'universal',
   srcDir: 'src/',
@@ -49,6 +57,7 @@ export default {
     }],
     '@nuxtjs/sitemap'
   ],
+  proxy,
   styleResources: {
     scss: [
       '~/assets/styles/vuetify/_index.scss'

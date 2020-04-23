@@ -67,31 +67,26 @@
         </v-row>
       </v-container>
     </section>
-    <!--
+
     <section class="white text-center pt-2">
       <v-container>
         <div class="display-1 font-weight-bold"><span class="primary--text">Firelayer</span> Newsletter</div>
         <p class="mt-2">Get the latest Firelayer news to your inbox.</p>
-        <div class="d-flex justify-center align-top" style="max-width: 600px; margin:auto;">
-          <v-text-field outlined class="mr-2" placeholder="Email"></v-text-field>
-          <v-btn x-large color="primary">
-            Subscribe
-          </v-btn>
-        </div>
+        <newsletter-form />
       </v-container>
-    </section> -->
+      <v-divider class="mt-2"></v-divider>
+    </section>
   </div>
 </template>
 
 <script>
 import LandingShell from '../components/common/LandingShell'
+import NewsletterForm from '../components/NewsletterForm'
 
 export default {
   components: {
-    LandingShell
-  },
-  data() {
-    return {}
+    LandingShell,
+    NewsletterForm
   }
 }
 </script>

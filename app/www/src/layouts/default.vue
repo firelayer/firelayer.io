@@ -28,7 +28,7 @@
     <v-content>
       <nuxt />
 
-      <v-footer color="white" class="pa-5">
+      <v-footer color="white" class="pt-5 pb-5">
         <v-container>
           <v-row>
             <v-col cols="12" md="4">

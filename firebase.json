@@ -18,6 +18,7 @@
     "ignore": [
       "*.log",
       ".gitignore",
+      "env.json",
       "service-key.json",
       "**/node_modules/**",
       "tsconfig.json"
@@ -31,6 +32,12 @@
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/subscribe",
+          "function": "subscribe"
+        }
       ]
     }
   ],

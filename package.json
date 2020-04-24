@@ -12,7 +12,8 @@
     "dev": "lerna run build && lerna run dev --parallel",
     "lint": "eslint --cache --cache-location=.cache/eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx,.mjs,.vue --report-unused-disable-directives .",
     "bootstrap": "yarn && lerna bootstrap",
-    "deploy": "yarn build && firebase deploy",
+    "deploy": "yarn build && yarn deploy:env && firebase deploy",
+    "deploy:env": "cd app/functions && yarn env",
     "http": "cd app/www && yarn http",
     "www": "cd app/www && yarn dev",
     "functions": "cd app/functions && yarn serve"

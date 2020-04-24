@@ -11,9 +11,9 @@
     "clean": "rm -rf dist",
     "lint": "echo 'not implemented'",
     "logs": "firebase functions:log",
-    "serve": "concurrently --kill-others \"tsc -w\" \"firebase serve --only functions\"",
+    "serve": "concurrently --kill-others \"tsc -w --preserveWatchOutput\" \"firebase serve --only functions\"",
     "shell": "npm run build && firebase functions:shell",
-    "env": "test -f env.json && firebase functions:config:unset env && firebase functions:config:set env=\"$(cat env.json)\" || echo \"Please add the file env.json before deploy.\""
+    "env": "test -f src/env.json && firebase functions:config:unset env && firebase functions:config:set env=\"$(cat src/env.json)\" || echo \"Please add the file src/env.json before deploy.\""
   },
   "dependencies": {
     "axios": "^0.19.2",

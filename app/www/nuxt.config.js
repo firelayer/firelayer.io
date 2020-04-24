@@ -48,7 +48,9 @@ export default {
   ],
   modules: [
     '@nuxtjs/style-resources',
-    '@nuxtjs/axios',
+    ['@nuxtjs/axios', {
+      baseURL: '/'
+    }],
     '@nuxtjs/proxy',
     ['@nuxtjs/pwa', {
       meta: false,

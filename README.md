@@ -6,4 +6,19 @@
 
 <br/>
 
-# Firelayer.io
+## Firelayer Documentation
+
+[Documentation Website](https://firelayer.io)
+
+## Development
+
+Firelayer.io website is organized as a monorepo using [Lerna](https://lerna.js.org/) and yarn workspaces. Useful scripts include:
+
+#### `yarn bootstrap`
+> Installs package dependencies and links packages together - using lerna and yarn workspaces
+
+#### `yarn build`
+> Cleans the previous builds and starts building on all sub packages - using lerna run build
+
+#### `yarn dev`
+> Starts the dev mode on all sub packages - using lerna run dev

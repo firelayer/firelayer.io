@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "nuxt start",
-    "build": "nuxt build && yarn generate",
+    "build": "yarn generate",
     "dev": "nuxt",
     "clean": "rm -rf .nuxt && rm -rf dist",
     "http": "cd dist && npx http-server",

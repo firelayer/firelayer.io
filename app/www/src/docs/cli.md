@@ -9,31 +9,6 @@ description: Firelayer CLI commands
 npm i -g @firelayer/cli
 ```
 
-## Permissions requirements
-For all the commands to work your service account needs to have the Google Cloud IAM permissions:
-- **Cloud Datastore Import Export Admin** (for migrations)
-- **Storage Admin** (for maintenance)
-
-<br>
-<br>
-
-After following the steps on [how to get a service account key](/docs/getting-started#get-the-firebase-service-account-key), go to your google cloud console and follow the steps:
-- open [google cloud console IAM](https://console.cloud.google.com/iam-admin/iam)
-- **make sure you are editing the correct project in the upper left corner**
-- find the member with the name `firebase-adminsdk` and click the `edit` pencil button
-- click `ADD ANOTHER ROLE` and add:
--- Cloud Datastore Import Export Admin
--- Storage Admin
-- click SAVE and that's it
-
-<br>
-
-In the end your IAM would look something like this:
-
-<a href="/images/IAM.jpg" target="_blank">
-  <img src="/images/IAM.jpg">
-</a>
-
 ## Commands
 
 ```sh
@@ -156,3 +131,28 @@ Print debugging information about your environment
 ```sh
 firelayer info
 ```
+
+## Permissions requirements
+For all the commands to work your service account needs to have the Google Cloud IAM permissions:
+- **Cloud Datastore Import Export Admin** (for backups)
+- **Storage Admin** (for backups)
+
+<br>
+<br>
+
+After following the steps on [how to get a service account key](/docs/getting-started#get-the-firebase-service-account-key), go to your google cloud console and follow the steps:
+- open [google cloud console IAM](https://console.cloud.google.com/iam-admin/iam)
+- **make sure you are editing the correct project in the upper left corner**
+- find the member with the name `firebase-adminsdk` and click the `edit` pencil button
+- click `ADD ANOTHER ROLE` and add:
+-- Cloud Datastore Import Export Admin
+-- Storage Admin
+- click SAVE and that's it
+
+<br>
+
+In the end your IAM would look something like this:
+
+<a href="/images/IAM.jpg" target="_blank">
+  <img src="/images/IAM.jpg">
+</a>

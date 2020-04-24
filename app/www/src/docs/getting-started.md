@@ -6,7 +6,7 @@ description: Starting a project with Firelayer
 #### System Requirements
 - [Node.js 10.13 or later](https://nodejs.org/)
 - [Firebase CLI 8 or later](https://firebase.google.com/docs/cli?#mac-linux-npm)
-
+- [Git](https://git-scm.com/)
 
 #### If you haven't already:
 - Sign in with your Firebase CLI: `firebase login`

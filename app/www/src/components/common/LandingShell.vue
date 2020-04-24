@@ -30,7 +30,7 @@
       <div>
         <span class="noselect">$ </span>
         <copy-label text="cd blog">
-          yarn dev
+          yarn www
         </copy-label>
       </div>
       <div class="etc noselect">$ ..and develop away</div>

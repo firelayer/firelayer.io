@@ -26,7 +26,8 @@
             <LandingShell />
             <div class="caption text-center mt-1">
               Requirements: Node >= 10 | Firebase CLI >= 8 | Git
-              <nuxt-link to="/docs/getting-started">More information here.</nuxt-link>
+              <br>
+              <nuxt-link to="/docs/getting-started">More information here</nuxt-link>
             </div>
           </v-col>
         </v-row>

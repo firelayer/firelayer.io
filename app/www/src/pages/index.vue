@@ -25,7 +25,7 @@
           <v-col cols="12" md="6" class="mt-4 mt-md-8 pa-md-3">
             <LandingShell />
             <div class="caption text-center mt-1">
-              Requirements: Node >= 10 | Firebase CLI >= 8 | Git
+              Requirements: Node >= 10 | Git
               <br>
               <nuxt-link to="/docs/getting-started">More information here</nuxt-link>
             </div>

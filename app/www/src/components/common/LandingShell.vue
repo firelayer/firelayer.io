@@ -15,22 +15,22 @@
       <div class="etc noselect">$ ..install firelayer globally</div>
       <div>
         <span class="noselect">$ </span>
-        <copy-label text="firelayer init blog">
-          firelayer init blog
+        <copy-label text="firelayer init myproject">
+          firelayer init myproject
         </copy-label>
       </div>
       <div class="etc noselect">$ ..follow the installation prompts</div>
       <div>
         <span class="noselect">$ </span>
-        <copy-label text="cd blog">
-          cd blog
+        <copy-label text="cd myproject">
+          cd myproject
         </copy-label>
       </div>
-      <div class="etc noselect">$ ..new project created on folder blog</div>
+      <div class="etc noselect">$ ..new project created on folder myproject</div>
       <div>
         <span class="noselect">$ </span>
-        <copy-label text="cd blog">
-          yarn www
+        <copy-label text="yarn dev">
+          yarn dev
         </copy-label>
       </div>
       <div class="etc noselect">$ ..and develop away</div>

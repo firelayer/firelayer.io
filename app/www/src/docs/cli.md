@@ -141,7 +141,7 @@ For all the commands to work your service account needs to have the Google Cloud
 <br>
 
 After following the steps on [how to get a service account key](/docs/getting-started#get-the-firebase-service-account-key), go to your google cloud console and follow the steps:
-- open [google cloud console IAM](https://console.cloud.google.com/iam-admin/iam)
+- open <a href="https://console.cloud.google.com/iam-admin/iam" target="_blank">google cloud console IAM</a>
 - **make sure you are editing the correct project in the upper left corner**
 - find the member with the name `firebase-adminsdk` and click the `edit` pencil button
 - click `ADD ANOTHER ROLE` and add:

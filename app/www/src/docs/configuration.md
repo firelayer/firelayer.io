@@ -10,7 +10,7 @@ All of the configuration files for the Firelayer framework are stored in the `co
 If they don't exist already, start by copying all the `*.dist.json` files and rename to `*.json` in their respective folder and fill out with the respective configurations content:
 
 ### > `config/keys/key.json`
-It's the service account key downloaded from the [firebase console](https://console.firebase.google.com/u/0/project/firelayer-boilerplate/settings/serviceaccounts/adminsdk) which will allow access the Admin SDK functionalities for the Firelayer CLI and for `app/functions` local development.
+It's the service account key downloaded from the <a href="https://console.firebase.google.com/u/0/project/firelayer-boilerplate/settings/serviceaccounts/adminsdk" target="_blank">firebase console</a> which will allow access the Admin SDK functionalities for the Firelayer CLI and for `app/functions` local development.
 
 ### > `config/app.json`
 This is the global configuration file, all applications will receive these configs. A good example of what to inject into all the applications would be the Firebase config.

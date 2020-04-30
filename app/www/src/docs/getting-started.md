@@ -7,9 +7,8 @@ description: Starting a project with Firelayer
 - <a href="https://nodejs.org" target="_blank">Node.js 10.13 or later</a>
 - <a href="https://git-scm.com/" target="_blank">Git</a>
 
-#### If you haven't already:
-- Sign in with your Firebase CLI: `firebase login`
-- Create a Firebase project **with a Web Application** to use in our Firelayer project
+#### Keep in mind:
+- You can use an existing Firebase project or create a new project on <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a>
 
 ## Setup
 

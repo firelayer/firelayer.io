@@ -16,6 +16,17 @@ npm i -g @firelayer/cli
 firelayer -h
 ```
 
+### add
+Add templates to the current firelayer project
+
+```sh
+# add from firelayer repository: https://github.com/firelayer/{name}-template
+firelayer add:template nuxt
+
+# or add directly from a git repository
+firelayer add:template git@github.com:firelayer/nuxt-template.git
+```
+
 ### auth
 Users and authentication commands
 
@@ -79,6 +90,9 @@ Create a new project
 
 ```sh
 firelayer init projectname
+
+# select template to initialize project
+firelayer init projectname -t nuxt
 ```
 
 ### make

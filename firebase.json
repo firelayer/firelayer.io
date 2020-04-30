@@ -33,12 +33,16 @@
         "**/.*",
         "**/node_modules/**"
       ],
-      "rewrites": [
-        {
-          "source": "/subscribe",
-          "function": "subscribe"
-        }
-      ]
+      "redirects": [{
+        "source": "/docs",
+        "destination": "/docs/getting-started",
+        "type": 302
+      }],
+      "rewrites": [{
+        "source": "/subscribe",
+        "function": "subscribe"
+      }],
+      "trailingSlash": false
     }
   ],
   "emulators": {

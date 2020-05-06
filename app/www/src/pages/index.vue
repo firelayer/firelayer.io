@@ -49,15 +49,14 @@
               Admin Dashboard
             </div>
             <v-card>
-              <a href="/images/admin-print.png" target="_blank">
-                <v-img
-                  class="white--text align-end"
-                  height="234px"
-                  contain
-                  src="/images/admin-print.png"
-                >
-                </v-img>
-              </a>
+              <v-img
+                class="white--text align-end"
+                height="234px"
+                contain
+                src="/images/admin-print.png"
+                @click="openPopup('/images/admin-print.png')"
+              >
+              </v-img>
             </v-card>
             <div class="body-1 pt-2">
               <div class="mb-2">Build with ease on top of this boilerplate dashboard.</div>
@@ -78,14 +77,14 @@
               Landing Page
             </div>
             <v-card>
-              <a href="/images/nuxt-print.jpg" target="_blank">
-                <v-img
-                  class="white--text align-end"
-                  height="234px"
-                  src="/images/nuxt-print.jpg"
-                >
-                </v-img>
-              </a>
+              <v-img
+                class="white--text align-end"
+                height="234px"
+                src="/images/nuxt-print.jpg"
+                @click="openPopup('/images/nuxt-print.jpg')"
+              >
+              </v-img>
+
             </v-card>
             <div class="body-1 pt-2">
               <div>Website with example pages. Comes with i18n support and Vuetify.</div>
@@ -107,14 +106,14 @@
               CLI Tools
             </div>
             <v-card height="234px">
-              <a href="/images/cli-print.png" target="_blank">
-                <v-img
-                  class="white--text align-end"
-                  height="234px"
-                  src="/images/cli-print.png"
-                >
-                </v-img>
-              </a>
+              <v-img
+                class="white--text align-end"
+                height="234px"
+                src="/images/cli-print.png"
+                @click="openPopup('/images/cli-print.png')"
+              >
+              </v-img>
+
             </v-card>
             <div class="body-1 pt-2">
               <div class="mb-2">CLI Tools to help develop and maintain your project.</div>
@@ -248,6 +247,21 @@
       </v-container>
       <v-divider class="mt-2"></v-divider>
     </section>
+
+    <!-- popup image -->
+    <v-dialog
+      v-model="showPopup"
+      width="800"
+    >
+      <v-card @click="showPopup = false">
+        <v-img
+          class="white--text align-end"
+          contain
+          :src="screenshot"
+        >
+        </v-img>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -261,6 +275,18 @@ export default {
     CopyLabel,
     LandingShell,
     NewsletterForm
+  },
+  data() {
+    return {
+      screenshot: '',
+      showPopup: false
+    }
+  },
+  methods: {
+    openPopup(image) {
+      this.screenshot = image
+      this.showPopup = true
+    }
   }
 }
 </script>

@@ -6,6 +6,7 @@ yarn-error.log*
 node_modules
 package-json.lock
 .firebase
+.firelayer
 .DS_Store
 .cache
 dist

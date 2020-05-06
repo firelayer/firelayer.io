@@ -1,11 +1,11 @@
 ---
 title: Configuration
-description: Configuring the Firelayer Framework
+description: Configuring Firelayer
 ---
 
 ## Introduction
 
-All of the configuration files for the Firelayer framework are stored in the `config` directory.
+All of the configuration files for Firelayer are stored in the `config` directory.
 
 If they don't exist already, start by copying all the `*.dist.json` files and rename to `*.json` in their respective folder and fill out with the respective configurations content:
 

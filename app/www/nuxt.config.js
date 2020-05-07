@@ -110,7 +110,7 @@ export default {
                 } catch (__) {}
               }
 
-              return '<kbd>' + md.utils.escapeHtml(str) + '</kbd>'
+              return `<pre>${str}</pre>`
             }
           }).use(markdownItAnchor, {
             permalink: true,

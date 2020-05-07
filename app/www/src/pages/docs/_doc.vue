@@ -71,6 +71,7 @@ export default {
     return {
       items: [
         { title: 'Getting Started', link: '/docs/getting-started' },
+        { title: 'Setting Up Firebase', link: '/docs/setting-up-firebase' },
         { title: 'Configuration', link: '/docs/configuration' },
         { title: 'Directory Structure', link: '/docs/directory-structure' },
         { title: 'CLI', link: '/docs/cli' }

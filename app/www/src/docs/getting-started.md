@@ -10,6 +10,9 @@ description: Starting a project with Firelayer
 #### Keep in mind:
 - You can use an existing Firebase project or create a new project on <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a>
 
+### **[Setting up Firebase - Guide](/docs/setting-up-firebase)**
+**Follow the guide on preparing a Firebase project for Firelayer**
+
 ## Setup
 
 We recomment creating a new Firelayer project using `@firelayer/cli`, which does the initial project setup automatically for you. To get the CLI, run:
@@ -41,7 +44,8 @@ To generate a private key file for your service account:
 2. Click Generate New Private Key, then confirm by clicking Generate Key.
 3. Securely store the JSON file in the folder `config/keys` as `key.json`
 4. Check `config/keys/key.json` **Important!** Do not share or distribute this key, must remain private.
-
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w37DtOsYe94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 #### Start the development servers
 <br>

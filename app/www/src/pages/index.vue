@@ -116,7 +116,10 @@
 
             </v-card>
             <div class="body-1 pt-2">
-              <div class="mb-2">CLI Tools to help develop and maintain your project.</div>
+              <div>CLI Tools to help develop and maintain your project.</div>
+              <div class="my-2 flex align-end">
+                <v-btn outlined href="/docs/cli">Documentation</v-btn>
+              </div>
               <span class="font-weight-bold">Features:</span>
               <ul>
                 <li>Run Cloud Firestore migrations</li>

@@ -14,7 +14,7 @@ This project uses Lerna to handle multiple packages and yarn workspaces to bette
 ## The Root Directory
 
 ### The `app` Directory
-The app directory contains the two main packages that compose this boilerplate, the landing page website `app/www` and the API on `app/functions`. We'll explore this directory in [more detail here](/docs/directory-structure#the-app-directory-2).
+The app directory contains the applications that your project uses, for example, the starter template is composed by three packages, the landing page website `app/website`, the API on `app/functions` and the Administration Dashboard on `app/admin`.
 
 ### The `config` Directory
 The config directory contains all the project configurations. Read the [configuration page for more information](/docs/configuration).
@@ -29,11 +29,3 @@ The rules directory contains the rules to be deployed in the Firebase project.
 - Storage rules
 - Storage CORS rules
 - Firestore indexes
-
-## The App Directory
-
-### The `app/functions` Directory
-This package is a simple example of how to use and integrate an API (ExpressJS) and other Cloud Functions features.
-
-### The `app/www` Directory
-This package is a basic landing page with user login and registration. Made with NuxtJS.

@@ -13,7 +13,7 @@
               <li>Serverless API for Cloud Functions with examples</li>
               <li>CLI Tools to help develop and maintain your project</li>
             </ul>
-            <div class="mt-6">
+            <div class="mt-6 text-center text-md-left">
               <v-btn
                 class="text-uppercase"
                 color="primary"
@@ -292,14 +292,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
-  text-align: center;
-
-  @include media("md-and-up") {
-    text-align: left;
-  }
-}
-
 .template-box {
   background-color: #2d3748;
   font-weight: bold;

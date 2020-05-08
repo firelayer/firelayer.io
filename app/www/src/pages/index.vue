@@ -254,7 +254,7 @@
     <!-- popup image -->
     <v-dialog
       v-model="showPopup"
-      width="1600"
+      width="900"
     >
       <v-card @click="showPopup = false">
         <v-img

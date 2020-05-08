@@ -6,7 +6,10 @@ description: Steps to configure Firebase to work with Firelayer
 **Guide on how to ready up a new Firebase project for Firelayer.**
 
 Resume video guide for the instructions bellow:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cw1h0GfVEqQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/cw1h0GfVEqQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 1. Create a project
 Open the <a href="https://console.firebase.google.com" target="_blank">Firebase Console</a> and create a new project.

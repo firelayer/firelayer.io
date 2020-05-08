@@ -45,7 +45,10 @@ To generate a private key file for your service account:
 3. Securely store the JSON file in the folder `config/keys` as `key.json`
 4. Check `config/keys/key.json` **Important!** Do not share or distribute this key, must remain private.
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w37DtOsYe94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/w37DtOsYe94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 #### Start the development servers
 <br>

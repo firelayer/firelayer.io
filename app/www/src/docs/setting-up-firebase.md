@@ -21,7 +21,7 @@ We will need to sign up new users in our application so we are going to enable t
 To persist the data of our applications we have at our disposal two databases, very easy to setup.
 
 1. Click on **Database** on the Navigation menu under **Develop**
-2. Click "Create Database" and select the region where you want your to store your databases and storage bucket. [More on regions here.](https://firebase.google.com/docs/projects/locations)
+2. Click "Create Database" and select the region where you want your to store your databases and storage bucket. <a href="https://firebase.google.com/docs/projects/locations" target="_blank">More on regions here.</a>
 
 ## 4. Setup Storage
 To store files and our backups we will need a storage bucket. So let's create our default one.

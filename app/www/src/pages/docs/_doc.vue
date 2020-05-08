@@ -6,8 +6,21 @@
       fixed
     >
       <v-list dense nav>
+        <v-subheader class="text-uppercase font-weight-bold">Documentation</v-subheader>
         <v-list-item
-          v-for="item in items"
+          v-for="item in starting"
+          :key="item.title"
+          :to="item.link"
+          link
+        >
+          <v-list-item-content>
+            <v-list-item-title class="body-1 font-weight-black">{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-subheader class="text-uppercase font-weight-bold mt-6">Guides</v-subheader>
+        <v-list-item
+          v-for="item in guides"
           :key="item.title"
           :to="item.link"
           link
@@ -35,8 +48,21 @@
         class="d-none d-md-block mt-2"
         color="transparent"
       >
+        <v-subheader class="text-uppercase font-weight-bold">Documentation</v-subheader>
         <v-list-item
-          v-for="item in items"
+          v-for="item in starting"
+          :key="item.title"
+          :to="item.link"
+          link
+        >
+          <v-list-item-content>
+            <v-list-item-title class="body-1 font-weight-black">{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-subheader class="text-uppercase font-weight-bold mt-6">Guides</v-subheader>
+        <v-list-item
+          v-for="item in guides"
           :key="item.title"
           :to="item.link"
           link
@@ -69,12 +95,15 @@ export default {
   },
   data() {
     return {
-      items: [
+      starting: [
         { title: 'Getting Started', link: '/docs/getting-started' },
-        { title: 'Setting Up Firebase', link: '/docs/setting-up-firebase' },
         { title: 'Configuration', link: '/docs/configuration' },
         { title: 'Directory Structure', link: '/docs/directory-structure' },
-        { title: 'CLI', link: '/docs/cli' }
+        { title: 'Commands (CLI)', link: '/docs/cli' }
+      ],
+      guides: [
+        { title: 'Setting Up Firebase', link: '/docs/setting-up-firebase' },
+        { title: 'Multiple Environments', link: '/docs/multiple-environments' }
       ],
       drawer: false
     }
@@ -151,6 +180,14 @@ export default {
         display: flex !important;
       }
     }
+  }
+
+  p {
+    margin-bottom: 1.2rem;
+  }
+
+  ul {
+    margin-bottom: 2rem;
   }
 }
 </style>

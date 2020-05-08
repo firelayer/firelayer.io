@@ -10,7 +10,7 @@ description: Starting a project with Firelayer
 #### Keep in mind:
 - You can use an existing Firebase project or create a new project on <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a>
 
-### **[Setting up Firebase - Guide](/docs/setting-up-firebase)**
+### [Setting up Firebase - Guide](/docs/setting-up-firebase)
 **Follow the guide on preparing a Firebase project for Firelayer**
 
 ## Setup

@@ -21,10 +21,10 @@ Add templates to the current firelayer project
 
 ```sh
 # add from firelayer repository: https://github.com/firelayer/{name}-template
-firelayer add:template nuxt
+firelayer add:template starter
 
 # or add directly from a git repository
-firelayer add:template git@github.com:firelayer/nuxt-template.git
+firelayer add:template git@github.com:firelayer/starter-template.git
 ```
 
 ### auth
@@ -92,7 +92,7 @@ Create a new project
 firelayer init projectname
 
 # select template to initialize project
-firelayer init projectname -t nuxt
+firelayer init projectname -t starter
 ```
 
 ### make
@@ -127,7 +127,7 @@ firelayer run "node index.js"
 ### up / down
 Maintenance mode for the application.
 - Will deploy rules that will prevent read and write access for Storage, Firestore and Realtime database.
-- Set the Realtime '_SETTINGS': { maintenance: true } so the frontend can see the maintenance mode.
+- Set the Realtime '_settings': { maintenance: true } so the frontend can see the maintenance mode.
 
 <br>
 

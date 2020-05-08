@@ -2,6 +2,7 @@
   <v-container class="docs">
     <v-navigation-drawer
       v-model="drawer"
+      class="d-md-none"
       hide-overlay
       fixed
     >
@@ -106,11 +107,6 @@ export default {
         { title: 'Multiple Environments', link: '/docs/multiple-environments' }
       ],
       drawer: false
-    }
-  },
-  watch: {
-    '$vuetify.breakpoint.mdAndUp'(val) {
-      if (val) this.drawer = false
     }
   },
   async asyncData({ params }) {

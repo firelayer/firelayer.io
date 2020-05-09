@@ -71,8 +71,14 @@ export default {
     routes() {
       const files = []
 
+      // add documentation routes
       fs.readdirSync(path.join(__dirname, 'src/docs')).forEach((file) => {
         files.push('/docs/' + file.replace('.md', ''))
+      })
+
+      // add templates routes
+      fs.readdirSync(path.join(__dirname, 'src/docs-templates')).forEach((file) => {
+        files.push('/templates/' + file.replace('.md', ''))
       })
 
       return files

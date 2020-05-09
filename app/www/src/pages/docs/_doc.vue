@@ -1,52 +1,11 @@
 <template>
   <v-container class="docs">
-    <v-navigation-drawer
-      v-model="drawer"
-      class="d-md-none"
-      hide-overlay
-      fixed
-    >
-      <v-list dense nav>
-        <v-subheader class="text-uppercase font-weight-bold">Documentation</v-subheader>
-        <v-list-item
-          v-for="item in starting"
-          :key="item.title"
-          :to="item.link"
-          link
-        >
-          <v-list-item-content>
-            <v-list-item-title class="body-1 font-weight-black">{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-subheader class="text-uppercase font-weight-bold mt-6">Guides</v-subheader>
-        <v-list-item
-          v-for="item in guides"
-          :key="item.title"
-          :to="item.link"
-          link
-        >
-          <v-list-item-content>
-            <v-list-item-title class="body-1 font-weight-black">{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-btn
-      class="d-md-none drawer-button"
-      rounded
-      @click="drawer = !drawer"
-    >
-      <v-icon right>mdi-menu</v-icon>
-    </v-btn>
-
     <div class="d-flex flex-row docs-container">
       <v-list
         flat
         dense
         nav
-        class="d-none d-md-block mt-2"
+        class="d-none d-md-block mt-2 docs-menu"
         color="transparent"
       >
         <v-subheader class="text-uppercase font-weight-bold">Documentation</v-subheader>
@@ -105,12 +64,17 @@ export default {
       guides: [
         { title: 'Setting Up Firebase', link: '/docs/setting-up-firebase' },
         { title: 'Multiple Environments', link: '/docs/multiple-environments' }
-      ],
-      drawer: false
+      ]
     }
   },
-  async asyncData({ params }) {
-    const doc = await import(`~/docs/${params.doc}.md`)
+  async asyncData({ params, error }) {
+    let doc = {}
+
+    try {
+      doc = await import(`~/docs/${params.doc}.md`)
+    } catch (e) {
+      error({ statusCode: 404 })
+    }
 
     return {
       doc,
@@ -129,75 +93,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.docs {
-  .drawer-button {
-    position: fixed;
-    top: 70px;
-    left: -22px;
-    z-index: 5;
-  }
-
-  .docs-container {
-    position: relative;
-  }
-
-  .v-list-item__title {
-    line-height: 1.5rem !important;
-  }
-
-  .v-list-item--active {
-    color: $primary !important;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  h2,
-  h3,
-  h4,
-  h5 {
-    position: relative;
-    margin-top: 1.8rem;
-    margin-bottom: 0.6rem;
-
-    .header-anchor {
-      justify-content: center;
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      left: -38px;
-    }
-
-    &:hover {
-      .header-anchor {
-        display: flex !important;
-      }
-    }
-  }
-
-  p {
-    margin-bottom: 1.2rem;
-  }
-
-  ul {
-    margin-bottom: 2rem;
-  }
-
-  .video {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-  }
-
-  .video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-</style>

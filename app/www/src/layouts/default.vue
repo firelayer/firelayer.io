@@ -12,6 +12,13 @@
         </nuxt-link>
         <v-spacer></v-spacer>
         <v-btn
+          to="/templates"
+          color="primary"
+          class="d-none d-sm-flex"
+          text
+          large
+        >Templates</v-btn>
+        <v-btn
           to="/docs/getting-started"
           color="primary"
           class="mr-2"
@@ -24,6 +31,53 @@
         </v-btn>
       </v-container>
     </v-app-bar>
+
+    <v-navigation-drawer
+      v-model="drawer"
+      class="d-md-none"
+      hide-overlay
+      fixed
+    >
+      <v-list dense nav>
+        <v-list-item to="/templates" exact link>
+          <v-list-item-content>
+            <v-list-item-title class="body-1 font-weight-black">Templates</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-subheader class="text-uppercase font-weight-bold mt-2">Documentation</v-subheader>
+        <v-list-item
+          v-for="item in starting"
+          :key="item.title"
+          :to="item.link"
+          link
+        >
+          <v-list-item-content>
+            <v-list-item-title class="body-1 font-weight-black">{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-subheader class="text-uppercase font-weight-bold mt-6">Guides</v-subheader>
+        <v-list-item
+          v-for="item in guides"
+          :key="item.title"
+          :to="item.link"
+          link
+        >
+          <v-list-item-content>
+            <v-list-item-title class="body-1 font-weight-black">{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-btn
+      class="d-md-none drawer-button"
+      rounded
+      @click="drawer = !drawer"
+    >
+      <v-icon right>mdi-menu</v-icon>
+    </v-btn>
 
     <v-content>
       <nuxt />
@@ -77,7 +131,18 @@ export default {
         color: 'black',
         message: '',
         timeout: 3000
-      }
+      },
+      starting: [
+        { title: 'Getting Started', link: '/docs/getting-started' },
+        { title: 'Configuration', link: '/docs/configuration' },
+        { title: 'Directory Structure', link: '/docs/directory-structure' },
+        { title: 'Commands (CLI)', link: '/docs/cli' }
+      ],
+      guides: [
+        { title: 'Setting Up Firebase', link: '/docs/setting-up-firebase' },
+        { title: 'Multiple Environments', link: '/docs/multiple-environments' }
+      ],
+      drawer: false
     }
   },
   computed: {
@@ -98,5 +163,12 @@ export default {
   &:before {
     background-color: transparent;
   }
+}
+
+.drawer-button {
+  position: fixed;
+  top: 70px;
+  left: -22px;
+  z-index: 5;
 }
 </style>

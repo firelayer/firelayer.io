@@ -32,6 +32,7 @@ export default {
   loading: { color: '#ff4700' },
   css: [
     '~/assets/styles/global.css',
+    '~/assets/styles/docs.scss',
     '~/assets/styles/hljs.css'
   ],
   plugins: [

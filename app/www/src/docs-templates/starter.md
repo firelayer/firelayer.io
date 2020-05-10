@@ -70,6 +70,13 @@ yarn deploy
 npm run deploy
 ```
 
+<br>
+
+You can run each separately by running:
+- `yarn deploy:admin` or `npm run deploy:admin`
+- `yarn deploy:website` or `npm run deploy:website`
+- `yarn deploy:functions` or `npm run deploy:functions`
+
 #### Deploy Cloud Functions Environment Variables
 To deploy cloud functions environment variables run:
 ```sh

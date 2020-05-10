@@ -1,5 +1,10 @@
 <template>
   <v-container class="docs">
+    <div class="pa-md-2 text-uppercase caption font-weight-black">
+      <nuxt-link to="/templates">Templates</nuxt-link>
+      <span class="mx-1">></span>
+      <span>{{ template.attributes.title }}</span>
+    </div>
     <div class="d-flex flex-row docs-container">
       <v-list
         flat
@@ -22,9 +27,6 @@
       </v-list>
 
       <div class="pa-md-2 pl-md-12" style="min-width: 0; width: 100%;">
-        <div>
-          <nuxt-link to="/templates" class="text-uppercase caption font-weight-black">Templates</nuxt-link>
-        </div>
         <h1>{{ template.attributes.title }}</h1>
         <div class="mt-4" v-html="template.html"></div>
         <div class="caption mt-5">

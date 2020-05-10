@@ -1,5 +1,5 @@
 ---
-title: Starter Template
+title: Starter Template - Documentation
 description: Firelayer Default Starter Template
 ---
 

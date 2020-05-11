@@ -34,6 +34,10 @@ Add a landing page website:
 firelayer add:template landing
 ```
 
+<br>
+
+Don't forget to **verify hosting properties** in `firebase.json` and targets on `.firebaserc` after adding a template. <a href="https://firebase.google.com/docs/cli/targets" target="_blank">More on firebase hosting targets here</a>
+
 #### Install dependencies
 `yarn bootstrap` or for NPM `npm run bootstrap`
 

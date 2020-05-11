@@ -23,16 +23,16 @@
         </v-img>
       </v-card>
       <div class="pt-2 flex align-end">
+        <v-btn outlined to="/templates/starter">Documentation</v-btn>
         <v-btn
-          color="secondary"
+          class="ml-1"
+          outlined
           href="https://github.com/firelayer/starter-template"
           target="_blank"
         >
           <v-icon left>mdi-github</v-icon>
           Github
         </v-btn>
-        <br>
-        <v-btn outlined class="mt-2" to="/templates/starter">Documentation</v-btn>
       </div>
       <div class="body-1 pt-2">
         Default template on <code>firelayer init</code> comes with an Administration Dashboard and Express API with user management, examples on firebase triggers and example on pubsub scheduler.
@@ -62,10 +62,10 @@
         </v-img>
       </v-card>
       <div class="pt-2 flex align-end">
-        <v-btn color="secondary" href="https://firelayer-starter-template.web.app" target="_blank">Demo</v-btn>
+        <v-btn outlined to="/templates/landing">Documentation</v-btn>
         <v-btn
           class="ml-1"
-          color="secondary"
+          outlined
           href="https://github.com/firelayer/landing-template"
           target="_blank"
         >
@@ -73,7 +73,7 @@
           Github
         </v-btn>
         <br>
-        <v-btn outlined class="mt-2" to="/templates/landing">Documentation</v-btn>
+        <v-btn color="secondary" class="mt-2" href="https://firelayer-starter-template.web.app" target="_blank">Demo</v-btn>
       </div>
       <div class="body-1 pt-2">
         Landing page website with example pages. Built with Nuxt, Vue, and comes with i18n support and Vuetify.
@@ -96,7 +96,7 @@
         </div>
       </v-card>
       <div class="body-1 pt-2">
-        More templates in progress.. <br> You can make your own, <code>firelayer init</code> and <code>firelayer add:template</code> also accept git repositories as template input.
+        More templates in progress.. <br> It's also possible to use your own templates. The commands <code>firelayer init</code> and <code>firelayer add:template</code> also accept git repositories as template input.
       </div>
     </v-col>
   </v-row>

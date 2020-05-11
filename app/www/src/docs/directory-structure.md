@@ -13,8 +13,8 @@ This project uses Lerna to handle multiple packages and yarn workspaces to bette
 
 ## The Root Directory
 
-### The `app` Directory
-The app directory contains the applications that your project uses, for example, the starter template is composed by three packages, the landing page website `app/website`, the API on `app/functions` and the Administration Dashboard on `app/admin`.
+### The `apps` Directory
+The app directory contains the applications packages that your project uses. For example, the Starter Template is composed by two packages, the Administration Dashboard on `apps/admin` and the Cloud Functions API on `apps/functions`.
 
 ### The `config` Directory
 The config directory contains all the project configurations. Read the [configuration page for more information](/docs/configuration).

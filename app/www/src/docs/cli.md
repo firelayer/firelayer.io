@@ -31,11 +31,14 @@ firelayer add:template git@github.com:firelayer/starter-template.git
 Users and authentication commands
 
 ```sh
+# create a new user
+firelayer auth:add -u useremail@example.com -p password123
+
 # get the user information
-firelayer auth -u useremail@firelayer.io
+firelayer auth -u useremail@example.com
 
 # set the user as admin ( custom claims with admin: 1 )
-firelayer auth -u useremail@firelayer.io --set-admin
+firelayer auth -u useremail@example.com --set-admin
 ```
 
 ### db

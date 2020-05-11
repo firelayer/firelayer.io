@@ -43,12 +43,12 @@ Firebase also handles your website hosting so to get it started just:
 That creates your default hosting site repository.
 
 ### Multiple Sites
-If you're starting with the Starter Template (default) you will need **two hosting targets**, two different websites, one for the administration dashboard and other for the landing page website.
+If you're starting with the **Starter Template (default)** and add the **Landing Template** you will need **two hosting targets**, two different websites, one for the administration dashboard and other for the landing page website.
 To create a second hosting site, click on "Add another site" on the bottom of the page and on the prompt write the name you wish to set your new website.
 
 You will need to define this hosting names on `.firebaserc` once your project is setup:
 ```sh
-#.firebaserc example file for starter template
+#.firebaserc example file for starter template + landing template
 {
   "projects": {
     "default": "my-new-firelayer"
@@ -56,7 +56,7 @@ You will need to define this hosting names on `.firebaserc` once your project is
   "targets": {
     "my-new-firelayer": {
       "hosting": {
-        "website": [
+        "landing": [
           "my-new-firelayer"
         ],
         "admin": [
@@ -74,7 +74,7 @@ If you haven't already follow the step on the [Getting Started - Get the Firebas
 ## Create Web Application (Optional)
 Initiating a new project using `firelayer init` will prompt you to create a new web application if you don't have any web application on the project you selected.
 
-You can create it now in the Firebase Console while you are there and then select it on `firelayer init`.
+You can create it now in the Firebase Console and then select it on `firelayer init`.
 
 ## All set
 

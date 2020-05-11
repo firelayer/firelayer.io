@@ -19,12 +19,6 @@ description: Firelayer Default Starter Template
 - Send auth emails with SendGrid
 - Vue & Vuetify Components
 
-### Landing Page `apps/website`
-- Sign In, register, verify email and reset password
-- User Dashboard
-- Localization
-- Vue with Nuxt & Vuetify Components
-
 ## Installing
 
 ```sh
@@ -33,25 +27,41 @@ firelayer init myproject -t starter
 firelayer add:template starter
 ```
 
+<br>
+
+Add a landing page website:
+```sh
+firelayer add:template landing
+```
+
+#### Install dependencies
+`yarn bootstrap` or for NPM `npm run bootstrap`
+
 ## Developing
 
 To start run **`yarn dev`** or **`npm run dev`** and the three applications should be ready on:
 - Admin - http://localhost:8081
-- Website - http://localhost:8080
 - Functions - http://localhost:5000/api/api
 (ports may change if already in use by other services)
 
 You can run each separately by running:
 - `yarn dev:admin` or `npm run dev:admin`
-- `yarn dev:website` or `npm run dev:website`
 - `yarn dev:functions` or `npm run dev:functions`
 
 ### Adding an Administrator
-1. Follow the steps on [Getting Started to add a Service Account key](https://firelayer.io/docs/getting-started#get-the-firebase-service-account-key) to your project so you can run Firelayer CLI helpers.
+1. Follow the steps on [**Getting Started to add a Service Account key**](https://firelayer.io/docs/getting-started#get-the-firebase-service-account-key) to your project so you can run Firelayer CLI helpers.
 
-2. If you don't have any users on this Firebase Project you can always create a new one using the Landing Page on http://localhost:8080 (if not running: `yarn dev:website`) or on the <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a>.
+2. If you don't have any users on this Firebase Project you can always create a new one using the **Firelayer CLI** or on the <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a>.
+```sh
+firelayer auth:add -u emailofuser@example.com -p password123
+```
+
+<br>
 
 3. Add Administration privileges to user:
+
+<br>
+
 ```sh
 firelayer auth -u emailofuser@example.com --set-admin
 ```
@@ -74,7 +84,6 @@ npm run deploy
 
 You can run each separately by running:
 - `yarn deploy:admin` or `npm run deploy:admin`
-- `yarn deploy:website` or `npm run deploy:website`
 - `yarn deploy:functions` or `npm run deploy:functions`
 
 #### Deploy Cloud Functions Environment Variables

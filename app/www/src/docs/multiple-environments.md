@@ -24,7 +24,7 @@ For our application we will need two Firebase projects that will represent our *
 Next step would be adding it to our `.firebaserc` file:
 This will define which Firebase hosting targets will be used while deploying.
 
-**(Example for Starter Template)**
+**(Example for Starter Template with Landing Template)**
 ```json
 // .firebaserc
 {
@@ -35,7 +35,7 @@ This will define which Firebase hosting targets will be used while deploying.
   "targets": {
     "my-project-staging": {
       "hosting": {
-        "website": [
+        "landing": [
           "my-project-staging" // hosting site for landing page
         ],
         "admin": [
@@ -45,7 +45,7 @@ This will define which Firebase hosting targets will be used while deploying.
     },
     "my-project-production": {
       "hosting": {
-        "website": [
+        "landing": [
           "my-project-production"
         ],
         "admin": [
@@ -86,7 +86,7 @@ project
    │       env.json
    │       env.production.json
    │
-   └─── website
+   └─── landing
            env.json
            env.production.json
 ```
@@ -115,17 +115,17 @@ Now every command ran by `firelayer run` will have injected in the `process.env`
 GOOGLE_APPLICATION_CREDENTIALS=/path/to/project/config/keys/key.production.json
 
 # stringified version of config files
-# functions/env.production.json + app.production.json
+# config/functions/env.production.json + config/app.production.json
 functions="{...}"
 
 # stringified version of config files
-# admin/env.production.json + app.production.json
+# config/admin/env.production.json + config/app.production.json
 admin="{...}"
 
 # stringified version of config files
-# website/env.production.json + app.production.json
-website="{...}"
+# config/landing/env.production.json + config/app.production.json
+landing="{...}"
 
-# app.production.json is injected in all applications
+# config/app.production.json is injected in all applications
 # because is the global configuration file for the project
 ```

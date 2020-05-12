@@ -55,6 +55,8 @@ To generate a private key file for your service account:
 
 ```sh
 yarn dev
+# or for npm 
+npm run dev
 ```
 
 #### Create a production build
@@ -62,6 +64,8 @@ yarn dev
 
 ```sh
 yarn build
+# or for npm 
+npm run build
 ```
 
 #### Deploy into Firebase
@@ -69,4 +73,6 @@ yarn build
 
 ```sh
 yarn deploy
+# or for npm 
+npm run deploy
 ```

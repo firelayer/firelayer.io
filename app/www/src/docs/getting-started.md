@@ -42,8 +42,9 @@ In order to use the Admin SDK in our Firebase Cloud Functions we will need the s
 To generate a private key file for your service account:
 1. In the Firebase console, open **Settings > <a href="https://console.firebase.google.com/u/0/project/_/settings/serviceaccounts/adminsdk" target="_blank">Service Accounts</a>**.
 2. Click Generate New Private Key, then confirm by clicking Generate Key.
-3. Securely store the JSON file in the folder `config/keys` as `key.json`
-4. Check `config/keys/key.json` **Important!** Do not share or distribute this key, must remain private.
+3. Securely store the JSON file in the folder `config/keys`
+4. Rename the key file to `key.json` (replace the default `key.json` file if it exists)
+5. Check if the path is correct: `config/keys/key.json` **Important!** Do not share or distribute this key, must remain private.
 <br>
 
 <div class="video">

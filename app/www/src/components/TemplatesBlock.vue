@@ -82,6 +82,47 @@
 
     <v-col cols="12" md="4">
       <div class="title text-center font-weight-black text-uppercase mb-2">
+        Board Template
+      </div>
+      <v-card>
+        <v-img
+          class="white--text align-end"
+          height="234px"
+          contain
+          src="/images/board-print.png"
+        >
+          <div class="template-box pa-2">
+            <copy-label text="firelayer init myproject -t board">
+              firelayer init myproject -t board
+            </copy-label>
+            <div class="overline font-weight-bold py-1 secondary--text">or add to existing firelayer project</div>
+            <copy-label text="firelayer add:template board">
+              firelayer add:template board
+            </copy-label>
+          </div>
+        </v-img>
+      </v-card>
+      <div class="pt-2 flex align-end">
+        <v-btn outlined to="/templates/board">Documentation</v-btn>
+        <v-btn
+          class="ml-1"
+          outlined
+          href="https://github.com/firelayer/board-template"
+          target="_blank"
+        >
+          <v-icon left>mdi-github</v-icon>
+          Github
+        </v-btn>
+        <br>
+        <v-btn color="secondary" class="mt-2" href="https://board.firelayer.io" target="_blank">Demo</v-btn>
+      </div>
+      <div class="body-1 pt-2">
+        Suggestion Board for user feedback. Built with Vue, Vuetify and Realtime database.
+      </div>
+    </v-col>
+
+    <v-col cols="12" md="4">
+      <div class="title text-center font-weight-black text-uppercase mb-2">
         More to come
       </div>
       <v-card height="234px">

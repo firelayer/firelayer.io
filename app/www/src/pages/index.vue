@@ -31,7 +31,7 @@
           <v-col cols="12" md="6" class="mt-4 mt-md-8 pa-md-3">
             <LandingShell />
             <div class="caption text-center mt-1">
-              Requirements: Node >= 10 | Git
+              Requirements: Node &gt;= 10 | Git
               <br>
               <nuxt-link to="/docs/getting-started">More information here</nuxt-link>
             </div>
@@ -40,7 +40,7 @@
       </v-container>
     </section>
 
-    <section id="templates" class="pt-4 pb-4">
+    <section class="pt-4 pb-4">
       <v-container>
         <div class="display-1 text-center mb-4">Starter Template</div>
         <v-row>

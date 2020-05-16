@@ -1,6 +1,7 @@
 ---
 title: Board Template - Documentation
-description: Firelayer Board Page Template
+description: Firelayer Board Page Template built with Vue and Realtime database
+keywords: board, suggestions, vue, vuetify, realtime database, firebase database
 ---
 
 **Follow the guide on preparing a Firebase project for Firelayer**
@@ -31,7 +32,7 @@ Don't forget to **verify hosting properties** in `firebase.json` and targets on 
 ## Developing
 
 To start run **`yarn dev`** or **`npm run dev`** and the three applications should be ready on:
-- Board - http://localhost:8082
+- Board - <span class="accent--text">localhost:8082</span>
 (ports may change if already in use by other services)
 
 You can run each separately by running:

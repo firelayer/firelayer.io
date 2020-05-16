@@ -1,6 +1,7 @@
 ---
 title: Landing Template - Documentation
-description: Firelayer Landing Page Template
+description: Firelayer Landing Page Template built with Nuxt with Vuetify
+keywords: landing, vue, vuetify, nuxt, landing page, i18n, translations
 ---
 
 **Follow the guide on preparing a Firebase project for Firelayer**
@@ -32,7 +33,7 @@ Don't forget to **verify hosting properties** in `firebase.json` and targets on 
 ## Developing
 
 To start run **`yarn dev`** or **`npm run dev`** and the three applications should be ready on:
-- Landing - http://localhost:8080
+- Landing - <span class="accent--text">localhost:8080</span>
 (ports may change if already in use by other services)
 
 You can run each separately by running:

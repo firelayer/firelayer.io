@@ -154,6 +154,22 @@ export default {
         ...this.toast
       }
     }
+  },
+  head() {
+    const canonical = `https://firelayer.io${this.$route.path}`
+
+    const link = [
+      { rel: 'canonical', href: canonical },
+      { rel: 'alternate', hreflang: 'en', href: `https://firelayer.io${this.$route.path}` }
+    ]
+
+    return {
+      htmlAttrs: { lang: 'en' },
+      link,
+      meta: [
+        { hid: 'og:url', property: 'og:url', content: canonical }
+      ]
+    }
   }
 }
 </script>

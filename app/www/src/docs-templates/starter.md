@@ -1,6 +1,7 @@
 ---
 title: Starter Template - Documentation
-description: Firelayer Default Starter Template
+description: Firelayer Default Starter Template with Administration Dashboard and Cloud Functions API built with ExpressJS and Vue
+keywords: express, dashboard, admin, administration, email, vue, vuetify, cloud functions
 ---
 
 **Follow the guide on preparing a Firebase project for Firelayer**
@@ -44,8 +45,8 @@ Don't forget to **verify hosting properties** in `firebase.json` and targets on 
 ## Developing
 
 To start run **`yarn dev`** or **`npm run dev`** and the three applications should be ready on:
-- Admin - http://localhost:8081
-- Functions - http://localhost:5000/api/api
+- Admin - <span class="accent--text">localhost:8081</span>
+- Functions - <span class="accent--text">localhost:5000/api/api</span>
 (ports may change if already in use by other services)
 
 You can run each separately by running:
@@ -72,7 +73,7 @@ firelayer auth -u emailofuser@example.com --set-admin
 
 <br>
 
-And now you can login on the administration dashboard - http://localhost:8081 (if not running: `yarn dev` )
+And now you can login on the administration dashboard - <span class="accent--text">localhost:8081</span> (if not running: `yarn dev` )
 
 ## Deploying
 

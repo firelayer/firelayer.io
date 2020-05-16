@@ -171,5 +171,5 @@ After following the steps on [how to get a service account key](/docs/getting-st
 In the end your IAM would look something like this:
 
 <a href="/images/IAM.jpg" target="_blank">
-  <img src="/images/IAM.jpg">
+  <img src="/images/IAM.jpg" alt="Google Cloud IAM">
 </a>

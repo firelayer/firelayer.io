@@ -82,12 +82,16 @@ export default {
     }
   },
   head() {
-    const title = '' || 'Documentation'
+    const title = `${this.doc.attributes.title} | Firelayer Documentation`
+    const { description } = this.doc.attributes
+    const suffixDescription = ', Jump-start your Firebase Project with fully integrated and ready to use templates, launch your Firebase MVP 10x faster with our templates'
 
     return {
-      title: `${this.doc.attributes.title} | Firelayer`,
+      title,
       meta: [
-        { hid: 'description', name: 'description', content: this.doc.attributes.description }
+        { hid: 'description', name: 'description', content: description + suffixDescription },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'twitter:title', name: 'twitter:title', content: title }
       ]
     }
   }

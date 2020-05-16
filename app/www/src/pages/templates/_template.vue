@@ -2,7 +2,7 @@
   <v-container class="docs">
     <div class="pa-md-2 text-uppercase caption font-weight-black">
       <nuxt-link to="/templates">Templates</nuxt-link>
-      <span class="mx-1">></span>
+      <span class="mx-1">&gt;</span>
       <span>{{ template.attributes.title }}</span>
     </div>
     <div class="d-flex flex-row docs-container">
@@ -80,12 +80,18 @@ export default {
     }
   },
   head() {
-    const title = '' || 'Template Documentation'
+    const title = `${this.template.attributes.title} | Firelayer`
+    const { description, keywords } = this.template.attributes
+    const fullKeywords = keywords + ', firebase, firelayer, template, firebase template, firebase boilerplate, boilerplate, code, hosting, mvp'
+    const suffixDescription = ', Jump-start your Firebase Project with fully integrated and ready to use templates, launch your Firebase MVP 10x faster with our templates'
 
     return {
-      title: `${this.template.attributes.title} | Firelayer`,
+      title,
       meta: [
-        { hid: 'description', name: 'description', content: this.template.attributes.description }
+        { hid: 'description', name: 'description', content: description + suffixDescription },
+        { hid: 'keywords', name: 'keywords', content: fullKeywords },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'twitter:title', name: 'twitter:title', content: title }
       ]
     }
   }

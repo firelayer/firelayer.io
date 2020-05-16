@@ -63,7 +63,7 @@ export default {
       title,
       meta: [
         { hid: 'description', name: 'description', content: description },
-        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:title', property: 'og:title', content: title },
         { hid: 'twitter:title', name: 'twitter:title', content: title }
       ]
     }

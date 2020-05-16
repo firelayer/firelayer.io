@@ -30,9 +30,9 @@ export default {
       { hid: 'keywords', name: 'keywords', content: keywords },
       // open graph
       { hid: 'og:site_name', property: 'og:site_name', content: 'Firelayer' },
-      { hid: 'og:title', name: 'og:title', content: title },
+      { hid: 'og:title', property: 'og:title', content: title },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:description', name: 'og:description', content: shortDescription },
+      { hid: 'og:description', property: 'og:description', content: shortDescription },
       { hid: 'og:image', property: 'og:image', content: 'https://firelayer.io/images/firelayer-card.png' },
       // twitter
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },

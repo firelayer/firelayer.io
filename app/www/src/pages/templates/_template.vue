@@ -90,7 +90,7 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: description + suffixDescription },
         { hid: 'keywords', name: 'keywords', content: fullKeywords },
-        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:title', property: 'og:title', content: title },
         { hid: 'twitter:title', name: 'twitter:title', content: title }
       ]
     }

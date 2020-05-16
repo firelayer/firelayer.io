@@ -117,6 +117,7 @@ export default {
   },
   build: {
     publicPath: '/_static/',
+    extractCSS: true,
     extend (config, ctx) {
       config.module.rules.push({
         test: /\.md$/,

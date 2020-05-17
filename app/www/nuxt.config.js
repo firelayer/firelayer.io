@@ -44,8 +44,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Material+Icons' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap' }
     ]
   },
   loading: { color: '#ff4700' },
@@ -63,7 +62,10 @@ export default {
     ['@nuxtjs/vuetify', {
       customVariables: ['~/assets/styles/vuetify'],
       optionsPath: '~/config/vuetify.options.js',
-      treeShake: true
+      treeShake: true,
+      defaultAssets: {
+        font: false
+      }
     }]
   ],
   modules: [
@@ -114,6 +116,13 @@ export default {
     name: 'Firelayer',
     'short_name': 'Firelayer',
     description: 'Firelayer - Jump-start you Firebase Web Project'
+  },
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['style', 'font'].includes(type)
+      }
+    }
   },
   build: {
     publicPath: '/_static/',

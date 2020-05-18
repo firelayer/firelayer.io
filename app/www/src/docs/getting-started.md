@@ -15,7 +15,7 @@ description: Starting a project with Firelayer
 
 ## Setup
 
-We recomment creating a new Firelayer project using `@firelayer/cli`, which does the initial project setup automatically for you. To get the CLI, run:
+We recommend creating a new Firelayer project using `@firelayer/cli`, which does the initial project setup automatically for you. To get the CLI, run:
 
 ```sh
 npm i -g @firelayer/cli

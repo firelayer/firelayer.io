@@ -23,7 +23,7 @@ npm i -g @firelayer/cli
 
 #### Create a new project
 
-With the following command, firelayer will copy the boilerplate and install it's dependencies.
+With the following command, firelayer will copy the boilerplate and install its dependencies.
 
 ```sh
 firelayer init new-project
@@ -37,14 +37,14 @@ cd new-project
 ```
 
 #### Get the Firebase Service Account key
-In order to use the Admin SDK in our Firebase Cloud Functions we will need the service account key. <a href="https://firebase.google.com/docs/admin/setup#initialize-sdk" target="_blank">More information here.</a>
+In order to use the Admin SDK in our Firebase Cloud Functions a service account key is needed. <a href="https://firebase.google.com/docs/admin/setup#initialize-sdk" target="_blank">More information here.</a>
 
 To generate a private key file for your service account:
 1. In the Firebase console, open **Settings &gt; <a href="https://console.firebase.google.com/u/0/project/_/settings/serviceaccounts/adminsdk" target="_blank">Service Accounts</a>**.
 2. Click Generate New Private Key, then confirm by clicking Generate Key.
 3. Securely store the JSON file in the folder `config/keys`
 4. Rename the key file to `key.json` (replace the default `key.json` file if it exists)
-5. Check if the path is correct: `config/keys/key.json` **Important!** Do not share or distribute this key, must remain private.
+5. Check if the path is correct: `config/keys/key.json` **Important!** Do not share or distribute this key, it must remain private.
 <br>
 
 <div class="video">

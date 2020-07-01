@@ -19,6 +19,7 @@ const keywords = 'firebase template, firelayer, firebase, boilerplate, firebase 
 
 export default {
   mode: 'universal',
+  target: 'static',
   srcDir: 'src/',
   head: {
     title,

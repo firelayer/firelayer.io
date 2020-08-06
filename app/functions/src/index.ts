@@ -22,7 +22,18 @@ export const subscribe = functions.https.onRequest(async (req, res) => {
     console.log('Subscribe Error')
     console.log(error.response.data)
 
-    return res.status(500).send({ message: 'Failed to subscribe. Please contact hello@firelayer.io' })
+    const { errors } = error.response.data
+
+    let showError = 'Failed to subscribe. Please contact hello@firelayer.io'
+
+    errors.forEach((error) => {
+      if (error.field === 'contacts[0].email') {
+        // capitalize sendgrid error message
+        showError = error.message.charAt(0).toUpperCase() + error.message.slice(1)
+      }
+    })
+
+    return res.status(500).send({ message: showError })
   }
 
   return res.send('ok')

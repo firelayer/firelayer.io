@@ -3,7 +3,7 @@
     <div v-if="!isSubscribed" class="d-flex flex-column flex-md-row justify-center align-top mx-auto" style="max-width: 600px;">
       <v-text-field
         v-model="email"
-        :rules="[rules.required, rules.email]"
+        :rules="[rules.required]"
         :validate-on-blur="false"
         :error="error"
         :error-messages="errorMessages"
@@ -36,8 +36,7 @@ export default {
       error: false,
       errorMessages: '',
       rules: {
-        required: (value) => !!value || 'E-mail is required',
-        email: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) || 'E-mail must be valid'
+        required: (value) => !!value || 'E-mail is required'
       }
     }
   },

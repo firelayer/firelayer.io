@@ -45,6 +45,20 @@ export default {
 
     return true
   },
+  async asyncData({ params, error }) {
+    let template = {}
+
+    try {
+      template = await import(`~/docs-templates/${params.template}.md`)
+    } catch (e) {
+      error({ statusCode: 404 })
+    }
+
+    return {
+      template,
+      filename: params.template
+    }
+  },
   data() {
     return {
       headers: [{
@@ -63,20 +77,6 @@ export default {
         title: 'Maintenance',
         link: '#maintenance'
       }]
-    }
-  },
-  async asyncData({ params, error }) {
-    let template = {}
-
-    try {
-      template = await import(`~/docs-templates/${params.template}.md`)
-    } catch (e) {
-      error({ statusCode: 404 })
-    }
-
-    return {
-      template,
-      filename: params.template
     }
   },
   head() {

@@ -1,6 +1,8 @@
 import * as functions from 'firebase-functions'
-import config from './config'
+import config from './config/index'
 import axios from 'axios'
+
+const { SENDGRID } = config
 
 export const subscribe = functions.https.onRequest(async (req, res) => {
   if (req.method !== 'POST') return res.sendStatus(404)
@@ -8,13 +10,13 @@ export const subscribe = functions.https.onRequest(async (req, res) => {
 
   try {
     await axios.put('https://api.sendgrid.com/v3/marketing/contacts', {
-      'list_ids': ['e0a7bcbe-d72c-4663-9dc2-8b377eac65ee'],
+      'list_ids': [SENDGRID.LIST_ID],
       contacts: [{
         email: req.body.email
       }]
     }, {
       headers: {
-        authorization: `Bearer ${config.SENDGRID_API_KEY}`,
+        authorization: `Bearer ${SENDGRID.API_KEY}`,
         'content-type': 'application/json'
       }
     })
@@ -24,7 +26,7 @@ export const subscribe = functions.https.onRequest(async (req, res) => {
 
     const { errors } = error.response.data
 
-    let showError = 'Failed to subscribe. Please contact hello@firelayer.io'
+    let showError = `Failed to subscribe. Please contact ${SENDGRID.CONTACT}`
 
     errors.forEach((error) => {
       if (error.field === 'contacts[0].email') {

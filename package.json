@@ -1,26 +1,30 @@
 {
   "name": "firelayer.io",
   "version": "1.0.0",
-  "description": "firelayer.io website",
+  "description": "Firelayer.io - Documentation Website",
   "private": true,
   "workspaces": [
-    "app/*"
+    "apps/*"
   ],
   "scripts": {
-    "start": "yarn dev",
-    "bootstrap": "yarn && lerna bootstrap",
-    "dev": "lerna run build && lerna run dev --parallel",
-    "http": "cd app/www && yarn http",
-    "www": "cd app/www && yarn dev",
-    "functions": "cd app/functions && yarn serve",
-    "lint": "eslint --cache --cache-location=.cache/eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx,.mjs,.vue --report-unused-disable-directives .",
-    "build": "lerna run build",
-    "build:www": "cd app/www && yarn build",
-    "build:functions": "cd app/functions && yarn build",
-    "deploy": "yarn build && yarn deploy:env && firebase deploy",
-    "deploy:env": "cd app/functions && yarn env",
-    "deploy:www": "yarn build:www && firebase deploy --only hosting",
-    "deploy:functions": "yarn build:functions && yarn deploy:env && firebase deploy --only functions"
+    "bootstrap": "yarn --ignore-engines && lerna bootstrap",
+    "build": "firelayer run \"lerna run build\"",
+    "build:functions": "firelayer run \"cd apps/functions && npm run build\"",
+    "build:www": "firelayer run \"cd apps/www && npm run build\"",
+    "clean": "lerna run --parallel clean",
+    "deploy": "npm run build && firebase deploy",
+    "deploy:cors": "firelayer deploy:cors",
+    "deploy:env": "firelayer deploy:env",
+    "deploy:functions": "npm run build:functions && firebase deploy --only functions",
+    "deploy:www": "npm run build:www && firebase deploy --only hosting:www",
+    "dev": "firelayer run \"lerna run dev --parallel\"",
+    "dev:functions": "firelayer run \"cd apps/functions && npm run dev\"",
+    "dev:www": "firelayer run \"cd apps/www && npm run dev\"",
+    "www": "npm run dev:www",
+    "emulators": "firelayer run \"firebase emulators:start\"",
+    "lint": "lerna run lint --parallel",
+    "reset": "lerna clean --yes && npm run clean",
+    "test": "lerna run test --parallel"
   },
   "husky": {
     "hooks": {
@@ -33,9 +37,13 @@
     }
   },
   "devDependencies": {
+    "@firelayer/cli": "^1.0.0",
+    "@firelayer/eslint-config": "^1.3.2",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
-    "husky": "^4.2.3"
+    "husky": "^4.2.3",
+    "lerna": "^3.20.2",
+    "typescript": "^3.8.2"
   }
 }

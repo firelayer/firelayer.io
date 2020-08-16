@@ -10,3 +10,8 @@ package-json.lock
 .DS_Store
 .cache
 dist
+key.json
+*.key.json
+env*.json
+app.json
+!*dist.json

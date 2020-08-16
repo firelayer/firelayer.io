@@ -53,20 +53,6 @@ export default {
 
     return true
   },
-  data() {
-    return {
-      starting: [
-        { title: 'Getting Started', link: '/docs/getting-started' },
-        { title: 'Configuration', link: '/docs/configuration' },
-        { title: 'Directory Structure', link: '/docs/directory-structure' },
-        { title: 'Commands (CLI)', link: '/docs/cli' }
-      ],
-      guides: [
-        { title: 'Setting Up Firebase', link: '/docs/setting-up-firebase' },
-        { title: 'Multiple Environments', link: '/docs/multiple-environments' }
-      ]
-    }
-  },
   async asyncData({ params, error }) {
     let doc = {}
 
@@ -79,6 +65,20 @@ export default {
     return {
       doc,
       filename: params.doc
+    }
+  },
+  data() {
+    return {
+      starting: [
+        { title: 'Getting Started', link: '/docs/getting-started' },
+        { title: 'Configuration', link: '/docs/configuration' },
+        { title: 'Directory Structure', link: '/docs/directory-structure' },
+        { title: 'Commands (CLI)', link: '/docs/cli' }
+      ],
+      guides: [
+        { title: 'Setting Up Firebase', link: '/docs/setting-up-firebase' },
+        { title: 'Multiple Environments', link: '/docs/multiple-environments' }
+      ]
     }
   },
   head() {

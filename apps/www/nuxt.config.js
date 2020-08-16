@@ -21,6 +21,9 @@ export default {
   mode: 'universal',
   target: 'static',
   srcDir: 'src/',
+  env: {
+    config: process.env['www'] || {}
+  },
   head: {
     title,
     meta: [

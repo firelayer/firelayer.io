@@ -20,6 +20,12 @@ export default {
       default: null
     }
   },
+  data() {
+    return {
+      pageNotFound: 'Page Not Found',
+      otherError: 'An Error Occurred'
+    }
+  },
   head() {
     const title = this.error.statusCode === 404 ? this.pageNotFound : this.otherError
 
@@ -28,12 +34,6 @@ export default {
       meta: [
         { hid: 'robots', name: 'robots', content: 'noindex, nofollow' }
       ]
-    }
-  },
-  data() {
-    return {
-      pageNotFound: 'Page Not Found',
-      otherError: 'An Error Occurred'
     }
   }
 }

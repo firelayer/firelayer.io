@@ -5,3 +5,59 @@ $error: #e06b6b;
 $info: #7da3bf;
 $success: #6bc56f;
 $warning: #ead11a;
+
+$blue: (
+  'base': #2196F3,
+  'lighten-5': #E3F2FD,
+  'lighten-4': #BBDEFB,
+  'lighten-3': #90CAF9,
+  'lighten-2': #64B5F6,
+  'lighten-1': #42A5F5,
+  'darken-1': #1E88E5,
+  'darken-2': #1976D2,
+  'darken-3': #1565C0,
+  'darken-4': #0D47A1,
+  'accent-1': #82B1FF,
+  'accent-2': #448AFF,
+  'accent-3': #2979FF,
+  'accent-4': #2962FF
+);
+
+$blue-grey: (
+  'base': #607d8b,
+  'lighten-5': #eceff1,
+  'lighten-4': #cfd8dc,
+  'lighten-3': #b0bec5,
+  'lighten-2': #90a4ae,
+  'lighten-1': #78909c,
+  'darken-1': #546e7a,
+  'darken-2': #455a64,
+  'darken-3': #37474f,
+  'darken-4': #263238
+);
+
+$grey: (
+  'base': #9e9e9e,
+  'lighten-5': #fafafa,
+  'lighten-4': #f5f5f5,
+  'lighten-3': #eeeeee,
+  'lighten-2': #e0e0e0,
+  'lighten-1': #bdbdbd,
+  'darken-1': #757575,
+  'darken-2': #616161,
+  'darken-3': #424242,
+  'darken-4': #212121
+);
+
+$shades: (
+  'black': #000000,
+  'white': #FFFFFF,
+  'transparent': transparent
+);
+
+$colors: (
+  'blue': $blue,
+  'blue-grey': $blue-grey,
+  'grey': $grey,
+  'shades': $shades
+);

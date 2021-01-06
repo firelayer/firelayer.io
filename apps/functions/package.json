@@ -16,7 +16,7 @@
     "env": "test -f src/env.json && firebase functions:config:unset env && firebase functions:config:set env=\"$(cat src/env.json)\" || echo \"Please add the file src/env.json before deploy.\""
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "firebase-admin": "^8.9.2",
     "firebase-functions": "^3.3.0"
   },

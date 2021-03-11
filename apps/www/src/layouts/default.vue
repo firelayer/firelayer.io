@@ -79,7 +79,7 @@
       <v-icon right>mdi-menu</v-icon>
     </v-btn>
 
-    <v-content>
+    <v-main>
       <nuxt />
 
       <v-footer color="white" class="pt-5 pb-5">
@@ -110,7 +110,7 @@
           </v-row>
         </v-container>
       </v-footer>
-    </v-content>
+    </v-main>
 
     <v-snackbar v-model="appToast.show" :timeout="appToast.timeout" :color="appToast.color" bottom>
       {{ appToast.message }}

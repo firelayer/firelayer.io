@@ -4,6 +4,8 @@ import axios from 'axios'
 
 const { SENDGRID } = config
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// @ts-ignore
 export const subscribe = functions.https.onRequest(async (req, res) => {
   if (req.method !== 'POST') return res.sendStatus(404)
   if (!req.body.email) return res.status(400).send({ message: 'Email is required.' })
